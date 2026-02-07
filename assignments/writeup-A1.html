@@ -23,7 +23,7 @@ checking that transformations can be correctly applied in the GUI.
 
 Reference image:
 <div class="twentytwenty-container">
-    <img src="A1-writeup/reference/task2-wireframe.png" alt="Rasterize cubes wireframe">
+    <img src="A1-writeup/images/a1t2.png" alt="Rasterize cubes wireframe">
 </div>
 Please replace the above image with your own screenshot of the rasterized wireframe cubes, but all in **RED**.
 This can be done by doing the following:
@@ -39,7 +39,7 @@ checking that rasterizing wireframe meshes will look decent.
 
 Reference image:
 <div class="twentytwenty-container">
-    <img src="A1-writeup/reference/task3-flat-triangles.png" alt="Rasterize flat cubes">
+    <img src="A1-writeup/images/a1t3.png" alt="Rasterize flat cubes">
 </div>
 Please replace the above image with your own screenshot of the rasterized flat triangles cubes, but all in **RED**.
 This can be done by doing the following:
@@ -55,14 +55,15 @@ checking that rasterizing flat triangle meshes will look decent.
 
 You do not need any screenshots for this task. However, please answer the following questions about `media/js3d/A1T4-blend-depth.js3d1`:
 * What combination of blend and depth styles would enable us to see three colors?
-    * Red: Blend: , Depth: 
-    * Green: Blend: , Depth: 
-    * Blue: Blend: , Depth: 
+    * Red: Replace , Depth: Less
+    * Green: Replace , Depth: Less
+    * Blue: Replace , Depth: Less
+This is because the colors will replace the others. Depth ensures that overlaps are checked.
 * What combination of blend and depth styles would enable us to see five colors?
-    * Red: Blend: , Depth: 
-    * Green: Blend: , Depth: 
-    * Blue: Blend: , Depth: 
-
+    * Red: Add , Depth: Always
+    * Green: Replace , Depth: Less
+    * Blue: Replace , Depth: Less
+This is because we will get red, green, blue, red + green, red + blue. This works as long as there is one add.
 Do note that there are multiple correct answers to the above two questions - as long as you provide a valid one, you will receive credit.
 
 Your completion will be graded based on the on the above answers, the reference `test.a1.task4.cpp` file and 
@@ -70,11 +71,19 @@ checking that rasterizing with different blend and depth modes will look decent.
 
 (##) GenAI Use CHECKPOINT
 
-Which model(s) did you use (e.g., ChatGPT-4, Claude-2, etc.)?
+Which model(s) did you use (e.g., ChatGPT-4, Claude-2, etc.)? 
+I use Claude Sonnet 4.5 and Gemini 3.
 
 For what purpose(s) did you use GenAI (e.g., brainstorming, code generation, debugging, etc.)?
+I used them for debugging and syntax fixing. 
 
 What was it good at? What was it bad at?
+While it is good at syntax error detection such as wrong variable names, it 
+struggles with actually determining or predicting errors. You need to give it
+very specific test case output and narrow it's search to target an error. I 
+use it as a tool that knows how to read code very well but needs to know exactly
+what kind of error has occurred. This meant that I needed to do the heavy 
+lifting of identifying what the type of error has occurred. 
 
 (##) A1T5 FINAL
 

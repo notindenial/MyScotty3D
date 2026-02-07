@@ -193,6 +193,10 @@ inline float dot(Vec2 l, Vec2 r) {
 	return l.x * r.x + l.y * r.y;
 }
 
+inline float cross(Vec2 l, Vec2 r) {
+    return l.x * r.y - l.y * r.x;
+}
+
 inline std::string to_string(Vec2 const &v) {
 	return "(" + std::to_string(v.x) + ", " + std::to_string(v.y) + ")";
 }
